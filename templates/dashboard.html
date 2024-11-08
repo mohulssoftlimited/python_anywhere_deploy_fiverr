@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="command-center">
+    <h1>Command Center</h1>
+    <div class="monitor-container">
+        <table class="monitor-table">
+            <thead>
+                <tr>
+                    <th class="url-column">URL</th>
+                    <th class="status-column">SSL STATUS</th>
+                    <th class="status-column">SITE STATUS</th>
+                    <th class="time-column">LAST CHECKED</th>
+                    <th class="action-column">ACTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for monitor in monitors %}
+                <tr>
+                    <td>{{ monitor.url }}</td>
+                    <td>
+                        {% if monitor.ssl_status == "Valid" %}
+                        <span class="status-pill valid">Valid</span>
+                        {% else %}
+                        <span class="status-pill invalid">Invalid</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if monitor.site_status == "Online" %}
+                        <span class="status-pill up">Up</span>
+                        {% else %}
+                        <span class="status-pill down">Down</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if monitor.last_checked %}
+                            {{ monitor.last_checked.strftime('%m/%d/%y %I:%M %p') }}
+                        {% else %}
+                            Not checked yet
+                        {% endif %}
+                    </td>
+                    <td>
+                        <form action="{{ url_for('delete_url', monitor_id=monitor.id) }}" method="POST" style="display: inline;">
+                            <button type="submit" class="delete-btn" onclick="return confirm('Remove this URL from monitoring?');">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="url-input-container">
+        <form action="{{ url_for('add_url') }}" method="POST" style="display: flex; width: 100%;">
+            <input type="text" name="url" placeholder="Enter URL" class="url-input" required>
+            <button type="submit" class="add-url-btn">Add URL</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

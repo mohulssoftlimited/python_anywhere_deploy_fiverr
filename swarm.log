@@ -1,0 +1,54 @@
+2024-11-08 11:59:35,780 INFO: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 11:59:35,783 INFO: Added job "check_url_status" to job store "default"
+2024-11-08 11:59:35,783 INFO: Scheduler started
+2024-11-08 11:59:35,831 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-08 11:59:35,831 INFO: [33mPress CTRL+C to quit[0m
+2024-11-08 11:59:35,835 INFO:  * Restarting with stat
+2024-11-08 11:59:37,667 INFO: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 11:59:37,671 INFO: Added job "check_url_status" to job store "default"
+2024-11-08 11:59:37,680 INFO: Scheduler started
+2024-11-08 11:59:37,701 WARNING:  * Debugger is active!
+2024-11-08 11:59:37,709 INFO:  * Debugger PIN: 414-811-387
+2024-11-08 12:00:26,516 INFO: 127.0.0.1 - - [08/Nov/2024 12:00:26] "GET / HTTP/1.1" 200 -
+2024-11-08 12:00:26,784 INFO: 127.0.0.1 - - [08/Nov/2024 12:00:26] "GET /static/css/style.css HTTP/1.1" 200 -
+2024-11-08 12:00:26,800 INFO: 127.0.0.1 - - [08/Nov/2024 12:00:26] "GET /static/SWARM%20LOGO.JPG HTTP/1.1" 200 -
+2024-11-08 12:00:26,801 INFO: 127.0.0.1 - - [08/Nov/2024 12:00:26] "GET /static/command%20center%20screen1400.png HTTP/1.1" 200 -
+2024-11-08 12:00:26,802 INFO: 127.0.0.1 - - [08/Nov/2024 12:00:26] "GET /static/focus-logo-only-500px%20white.png HTTP/1.1" 200 -
+2024-11-08 12:00:27,928 INFO: 127.0.0.1 - - [08/Nov/2024 12:00:27] "GET /static/SWARM_icon.JPG HTTP/1.1" 200 -
+2024-11-08 12:00:43,316 INFO: 127.0.0.1 - - [08/Nov/2024 12:00:43] "GET /login HTTP/1.1" 200 -
+2024-11-08 12:00:43,336 INFO: 127.0.0.1 - - [08/Nov/2024 12:00:43] "[36mGET /static/focus-logo-only-500px%20white.png HTTP/1.1[0m" 304 -
+2024-11-08 12:00:43,337 INFO: 127.0.0.1 - - [08/Nov/2024 12:00:43] "[36mGET /static/SWARM%20LOGO.JPG HTTP/1.1[0m" 304 -
+2024-11-08 12:00:43,338 INFO: 127.0.0.1 - - [08/Nov/2024 12:00:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-08 12:00:43,377 INFO: 127.0.0.1 - - [08/Nov/2024 12:00:43] "[36mGET /static/SWARM_icon.JPG HTTP/1.1[0m" 304 -
+2024-11-08 12:00:45,326 INFO: 127.0.0.1 - - [08/Nov/2024 12:00:45] "[36mGET /static/SWARM_icon.JPG HTTP/1.1[0m" 304 -
+2024-11-08 12:00:50,697 INFO: 127.0.0.1 - - [08/Nov/2024 12:00:50] "GET / HTTP/1.1" 200 -
+2024-11-08 12:00:50,756 INFO: 127.0.0.1 - - [08/Nov/2024 12:00:50] "GET /static/command%20center%20screen1400.png HTTP/1.1" 200 -
+2024-11-08 12:00:50,757 INFO: 127.0.0.1 - - [08/Nov/2024 12:00:50] "GET /static/css/style.css HTTP/1.1" 200 -
+2024-11-08 12:00:50,758 INFO: 127.0.0.1 - - [08/Nov/2024 12:00:50] "GET /static/SWARM%20LOGO.JPG HTTP/1.1" 200 -
+2024-11-08 12:00:50,759 INFO: 127.0.0.1 - - [08/Nov/2024 12:00:50] "GET /static/focus-logo-only-500px%20white.png HTTP/1.1" 200 -
+2024-11-08 12:00:52,920 INFO: 127.0.0.1 - - [08/Nov/2024 12:00:52] "GET /static/SWARM_icon.JPG HTTP/1.1" 200 -
+2024-11-08 12:34:30,848 INFO: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 12:34:30,851 INFO: Added job "check_url_status" to job store "default"
+2024-11-08 12:34:30,851 INFO: Scheduler started
+2024-11-08 12:34:30,981 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-08 12:34:30,981 INFO: [33mPress CTRL+C to quit[0m
+2024-11-08 12:34:30,983 INFO:  * Restarting with stat
+2024-11-08 12:34:33,178 INFO: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 12:34:33,180 INFO: Added job "check_url_status" to job store "default"
+2024-11-08 12:34:33,180 INFO: Scheduler started
+2024-11-08 12:34:33,212 WARNING:  * Debugger is active!
+2024-11-08 12:34:33,215 INFO:  * Debugger PIN: 135-451-303
+2024-11-08 12:34:43,052 INFO: 127.0.0.1 - - [08/Nov/2024 12:34:43] "GET / HTTP/1.1" 200 -
+2024-11-08 12:34:43,335 INFO: 127.0.0.1 - - [08/Nov/2024 12:34:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-08 12:34:43,342 INFO: 127.0.0.1 - - [08/Nov/2024 12:34:43] "[36mGET /static/focus-logo-only-500px%20white.png HTTP/1.1[0m" 304 -
+2024-11-08 12:34:43,346 INFO: 127.0.0.1 - - [08/Nov/2024 12:34:43] "[36mGET /static/SWARM%20LOGO.JPG HTTP/1.1[0m" 304 -
+2024-11-08 12:34:43,352 INFO: 127.0.0.1 - - [08/Nov/2024 12:34:43] "[36mGET /static/command%20center%20screen1400.png HTTP/1.1[0m" 304 -
+2024-11-08 12:34:44,352 INFO: 127.0.0.1 - - [08/Nov/2024 12:34:44] "[36mGET /static/SWARM_icon.JPG HTTP/1.1[0m" 304 -
+2024-11-08 12:34:45,328 INFO: 127.0.0.1 - - [08/Nov/2024 12:34:45] "GET /register HTTP/1.1" 200 -
+2024-11-08 12:34:45,345 INFO: 127.0.0.1 - - [08/Nov/2024 12:34:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-08 12:34:45,349 INFO: 127.0.0.1 - - [08/Nov/2024 12:34:45] "[36mGET /static/SWARM%20LOGO.JPG HTTP/1.1[0m" 304 -
+2024-11-08 12:34:45,349 INFO: 127.0.0.1 - - [08/Nov/2024 12:34:45] "[36mGET /static/focus-logo-only-500px%20white.png HTTP/1.1[0m" 304 -
+2024-11-08 12:34:45,383 INFO: 127.0.0.1 - - [08/Nov/2024 12:34:45] "[36mGET /static/SWARM_icon.JPG HTTP/1.1[0m" 304 -
+2024-11-08 12:34:49,667 INFO: 127.0.0.1 - - [08/Nov/2024 12:34:49] "[36mGET /static/SWARM_icon.JPG HTTP/1.1[0m" 304 -

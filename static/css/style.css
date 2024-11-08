@@ -1,0 +1,1068 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+:root {
+    --swarm-green: #89eb3c;
+    --swarm-bg: #191919;
+    --swarm-dark: #191919;
+    --swarm-light: #2d2d2d;
+    --swarm-grey: #a0a0a0;
+}
+
+body {
+    background-color: var(--swarm-bg);
+    color: var(--swarm-grey);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: var(--swarm-bg) !important;
+    border-bottom: none;
+    padding: 0.5rem 0;
+}
+
+.navbar-brand img {
+    height: 45px;
+    margin-right: 15px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--swarm-grey);
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--swarm-green);
+}
+
+.navbar-toggler {
+    border-color: var(--swarm-green);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='%2389eb3c' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Cards */
+.card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    border: none !important;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card-header {
+    border-radius: 10px 10px 0 0;
+    background-color: var(--swarm-dark);
+    border-bottom: none;
+    color: var(--swarm-grey);
+    font-weight: 500;
+}
+
+.card-body {
+    border-top: none !important;
+}
+
+/* Tables */
+.card .table {
+    margin-bottom: 0;
+    border-top: none !important;
+}
+
+.card .table thead th {
+    color: var(--swarm-grey);
+    border-top: none !important;
+    border-bottom: 1px solid rgba(137, 235, 60, 0.1) !important;
+}
+
+.card .table tbody td {
+    color: #ffffff !important;
+    background-color: #2d2d2d;
+    border: none;
+}
+
+/* Form controls */
+.form-control {
+    max-width: 70%;
+    margin: 0;
+    margin-left: 0;
+    background-color: #c9c9c9 !important;
+    border: none !important;
+    color: #000000 !important;
+    padding: 0.8rem 1.2rem;
+    height: auto;
+    border-radius: 8px !important;
+    outline: none !important;
+}
+
+.form-control:focus,
+.form-control:active,
+.form-control:hover,
+.form-control:visited,
+.form-control:-webkit-autofill,
+.form-control:-webkit-autofill:hover,
+.form-control:-webkit-autofill:focus,
+.form-control:-webkit-autofill:active,
+.form-control:focus-visible {
+    background-color: #c9c9c9 !important;
+    box-shadow: none !important;
+    color: #000000 !important;
+    border: none !important;
+    outline: none !important;
+}
+
+/* Chrome autofill override */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-text-fill-color: #000000 !important;
+    -webkit-box-shadow: 0 0 0 30px #c9c9c9 inset !important;
+    box-shadow: 0 0 0 30px #c9c9c9 inset !important;
+}
+
+/* Firefox specific */
+input:-moz-autofill,
+input:-moz-autofill:focus {
+    color: #000000 !important;
+    background-color: #c9c9c9 !important;
+}
+
+/* Super aggressive override */
+input {
+    background-color: #c9c9c9 !important;
+}
+
+input:not(:placeholder-shown) {
+    background-color: #c9c9c9 !important;
+}
+
+.form-control::placeholder {
+    color: #666666;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--swarm-dark);
+    border-color: var(--swarm-green);
+    color: var(--swarm-green);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--swarm-green);
+    border-color: var(--swarm-green);
+    color: var(--swarm-dark);
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 255, 0, 0.25);
+}
+
+/* Status badges */
+.badge-success {
+    background-color: var(--swarm-green);
+    color: var(--swarm-dark);
+}
+
+.badge-danger {
+    background-color: #ff3333;
+}
+
+/* Alerts */
+.alert {
+    background-color: var(--swarm-light);
+    border-color: var(--swarm-green);
+    color: var(--swarm-green);
+}
+
+.alert-danger {
+    border-color: #ff3333;
+    color: #ff3333;
+}
+
+/* Footer */
+.footer {
+    flex-shrink: 0;
+    background-color: var(--swarm-dark) !important;
+    border-top: none;
+    padding: 1.5rem 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-logo {
+    max-height: 20px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.footer-text {
+    font-size: 0.9rem;
+    color: var(--swarm-grey);
+}
+
+.developed-by {
+    font-size: 0.8rem;
+    color: var(--swarm-grey);
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--swarm-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--swarm-green);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00cc00;
+}
+
+/* Command Center Heading */
+.command-center {
+    font-family: 'Michroma', sans-serif;
+    color: var(--swarm-grey);
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    font-size: 2rem;
+}
+
+/* Sticky Footer */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
+    background-color: var(--swarm-dark) !important;
+    border-top: none;
+    padding: 1.5rem 0;
+    margin-top: auto;
+}
+
+/* URL Input styling */
+.url-input-group {
+    margin-top: 2rem;
+    padding: 0.5rem;
+}
+
+.input-group {
+    background: #2d2d2d;
+    border-radius: 8px;
+    padding: 0.25rem;
+}
+
+.btn-add-url {
+    background: transparent;
+    border: 1px solid var(--swarm-green);
+    color: var(--swarm-green);
+    border-radius: 8px !important;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.btn-add-url:hover {
+    background: var(--swarm-green);
+    color: var(--swarm-dark);
+}
+
+/* URL Input and Button styling */
+.input-group {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Remove Bootstrap's input group append styling */
+.input-group-append {
+    margin-left: 0;
+}
+
+.input-group > .input-group-append > .btn {
+    border-radius: 8px !important;
+}
+
+/* Super aggressive border removal */
+.form-control,
+.form-control:focus,
+.form-control:active,
+.form-control:hover,
+.form-control:visited,
+.form-control:-webkit-autofill,
+.form-control:-webkit-autofill:hover,
+.form-control:-webkit-autofill:focus,
+.form-control:-webkit-autofill:active,
+.form-control:focus-visible,
+.form-control:focus-within,
+.input-group .form-control {
+    background-color: #2d2d2d !important;
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+}
+
+/* Also target the input group container */
+.input-group {
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Additional autofill overrides */
+input:-internal-autofill-selected {
+    background-color: #c9c9c9 !important;
+    -webkit-box-shadow: 0 0 0 30px #c9c9c9 inset !important;
+}
+
+/* Transition delay to prevent flash of white */
+input {
+    transition: background-color 5000s ease-in-out 0s !important;
+}
+
+/* Specific styling for the URL input */
+.url-input {
+    background-color: #2d2d2d !important;
+    border: none !important;
+    color: #ffffff !important;
+    padding: 1rem 1.5rem;
+    height: auto;
+    border-radius: 8px !important;
+    outline: none !important;
+}
+
+.url-input:focus,
+.url-input:active,
+.url-input:hover {
+    background-color: #2d2d2d !important;
+    color: #ffffff !important;
+}
+
+/* Chrome autofill override for url-input specifically */
+.url-input:-webkit-autofill,
+.url-input:-webkit-autofill:hover,
+.url-input:-webkit-autofill:focus,
+.url-input:-webkit-autofill:active {
+    -webkit-text-fill-color: #ffffff !important;
+    -webkit-box-shadow: 0 0 0 30px #2d2d2d inset !important;
+    box-shadow: 0 0 0 30px #2d2d2d inset !important;
+}
+
+/* Firefox specific */
+.url-input:-moz-autofill,
+.url-input:-moz-autofill:focus {
+    color: #ffffff !important;
+    background-color: #2d2d2d !important;
+}
+
+/* Sign Up button styling */
+.btn-signup,
+input[type="submit"],
+button[type="submit"],
+.sign-up-btn,
+form button,
+form input[type="submit"] {
+    max-width: 70%;
+    margin: 0;
+    margin-left: 0;
+    display: block;
+    background-color: var(--swarm-green) !important;
+    border-color: var(--swarm-green) !important;
+    color: #000000 !important;
+    padding: 0.5rem 2rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/* Hover states */
+.btn-signup:hover,
+input[type="submit"]:hover,
+button[type="submit"]:hover,
+.sign-up-btn:hover,
+form button:hover,
+form input[type="submit"]:hover {
+    background-color: var(--swarm-green) !important;
+    border-color: var(--swarm-green) !important;
+    color: #000000 !important;
+    opacity: 0.9;
+}
+
+/* Add these styles to your existing CSS */
+
+.monitor-container {
+    background: rgba(32, 33, 35, 0.4);
+    border-radius: 4px;
+    padding: clamp(8px, 2vw, 10px);
+    margin: clamp(8px, 2vw, 10px) 0;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.monitor-table {
+    width: 100%;
+    min-width: 600px; /* Ensures table doesn't get too squeezed */
+    border-collapse: collapse;
+    font-size: clamp(12px, 1.2vw, 14px);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.monitor-table th {
+    color: #888;
+    text-align: left;
+    padding: clamp(4px, 1vw, 5px) clamp(8px, 1.5vw, 10px);
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.monitor-table td {
+    padding: clamp(4px, 1vw, 5px) clamp(8px, 1.5vw, 10px);
+}
+
+/* Column widths */
+.monitor-table .url-column {
+    width: 40%;
+    max-width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.monitor-table .status-column {
+    width: 20%;
+}
+
+.monitor-table .time-column {
+    width: 20%;
+}
+
+/* Status pills */
+.status-pill {
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: clamp(10px, 1vw, 11px);
+    display: inline-block;
+    white-space: nowrap;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.status-pill.valid,
+.status-pill.up {
+    background: #4ade80;
+    color: #1a1a1a;
+}
+
+.status-pill.invalid,
+.status-pill.down {
+    background: #ef4444;
+    color: white;
+}
+
+/* Form container */
+.url-form-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* Input styles */
+.url-input {
+    background: rgba(40, 41, 45, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: clamp(4px, 1vw, 5px) clamp(8px, 1.5vw, 10px);
+    border-radius: 3px;
+    font-size: clamp(12px, 1.2vw, 13px);
+    flex: 1;
+    min-width: 200px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Button styles */
+.add-url-btn {
+    background: #4ade80;
+    color: #1a1a1a;
+    border: none;
+    padding: clamp(4px, 1vw, 5px) clamp(12px, 2vw, 15px);
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: clamp(12px, 1.2vw, 13px);
+    white-space: nowrap;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .monitor-container {
+        margin: 5px;
+        padding: 5px;
+    }
+    
+    .url-form-container {
+        flex-direction: column;
+    }
+    
+    .url-input {
+        width: 100%;
+    }
+    
+    .add-url-btn {
+        width: 100%;
+        padding: 8px;
+    }
+}
+
+/* For very small screens */
+@media screen and (max-width: 480px) {
+    .monitor-table {
+        font-size: 11px;
+    }
+    
+    .status-pill {
+        padding: 1px 6px;
+        font-size: 10px;
+    }
+}
+
+/* Ensure smooth scrolling on touch devices */
+@media (hover: none) {
+    .monitor-container {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Command Center heading specific style */
+.command-center h1 {
+    font-family: 'Michroma', sans-serif;
+    font-size: clamp(24px, 3vw, 32px);
+    color: #888;
+    margin-bottom: 20px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+/* Ensure all other elements use Montserrat */
+.monitor-table,
+.url-input,
+.add-url-btn,
+.status-pill {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Table row styling */
+.monitor-table tr {
+    background: rgba(255, 255, 255, 0.03); /* Very subtle light grey */
+}
+
+/* Alternating rows if you want them */
+.monitor-table tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.05); /* Slightly more visible */
+}
+
+/* Optional hover effect */
+.monitor-table tr:hover {
+    background: rgba(255, 255, 255, 0.07);
+    transition: background 0.2s ease;
+}
+
+/* Make sure the text stays readable */
+.monitor-table td {
+    padding: 8px 10px;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 5px;
+    opacity: 0.7;
+    transition: all 0.2s ease;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+    color: #ef4444;
+}
+
+/* Adjust table to accommodate delete column */
+.monitor-table td:last-child {
+    width: 40px;
+    text-align: center;
+}
+
+/* Landing Page Styles */
+.landing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-section h1 {
+    font-family: 'Michroma', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 20px;
+    color: #4ade80;
+}
+
+.tagline {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-primary {
+    background: #4ade80;
+    color: #1a1a1a;
+    padding: 12px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.cta-primary:hover {
+    background: #888;
+    color: #1a1a1a;
+    transform: translateY(-2px);
+    text-decoration: none !important;
+}
+
+.cta-secondary {
+    background: rgba(74, 222, 128, 0.1);
+    color: #4ade80;
+    padding: 12px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.features-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.feature-card i {
+    font-size: 2rem;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    color: #888;
+    margin: 15px 0;
+    font-size: 1.5rem;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.feature-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-preview {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.preview-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.benefits-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.benefit ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.benefit li {
+    margin: 10px 0;
+    color: #888;
+}
+
+.start-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 40px 20px;
+    }
+    
+    .features-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Hero Background */
+.hero-background {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+                url('../swarm screenshot.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    position: relative;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Ensure the container is full width */
+.landing-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Make sure the image path in your HTML matches the file location */
+
+/* Hero Section */
+.hero-section {
+    background: #191919;
+    padding: 20px 20px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-left {
+    flex: 1;
+    padding: 20px;
+}
+
+.hero-right {
+    flex: 1;
+    padding: 20px;
+}
+
+.logo {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 1400px;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.cta-primary {
+    background: #4ade80;
+    color: #1a1a1a;
+    padding: 12px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.cta-primary:hover {
+    background: #888;
+    color: #1a1a1a;
+    transform: translateY(-2px);
+}
+
+/* Features Section */
+.features-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.feature-card i {
+    font-size: 2rem;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    color: #888;
+    margin: 15px 0;
+    font-size: 1.5rem;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.feature-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 968px) {
+    .features-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Form field sizing */
+.form-control {
+    max-width: 70%;  /* Reduce width by 30% */
+    margin: 0 auto;  /* Center the fields */
+    background-color: #c9c9c9 !important;
+    border: none !important;
+    color: #000000 !important;
+    padding: 0.8rem 1.2rem;  /* Slightly reduced padding */
+    height: auto;
+    border-radius: 8px !important;
+    outline: none !important;
+}
+
+/* Sign Up button sizing to match */
+.btn-signup,
+input[type="submit"],
+button[type="submit"],
+.sign-up-btn,
+form button,
+form input[type="submit"] {
+    max-width: 70%;
+    margin: 0 auto;
+    display: block;  /* For proper centering */
+    background-color: var(--swarm-green) !important;
+    border-color: var(--swarm-green) !important;
+    color: #000000 !important;
+    padding: 0.5rem 2rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.content-section {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.form-group {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.form-control {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Left align the labels */
+.form-control-label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+/* Add padding above the button */
+.btn-outline-info {
+    display: block;
+    margin: 40px auto 20px;
+}
+
+/* Keep the rest of your centered elements */
+.border-top {
+    text-align: center;
+}
+
+legend {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Remove all borders */
+.border-bottom, 
+legend.border-bottom {
+    border: none !important;
+    border-bottom: none !important;
+}
+
+.border-top {
+    border: none !important;
+    border-top: none !important;
+}
+
+/* In case Bootstrap is adding borders another way */
+fieldset {
+    border: none !important;
+}
+
+.form-group {
+    border: none !important;
+}
+
+/* URL input container */
+.url-input-container {
+    display: flex;
+    gap: 10px;
+    max-width: 800px;  /* Adjust as needed */
+    margin-bottom: 20px;
+}
+
+/* URL input field */
+.url-input-container input {
+    flex: 1;
+    background: rgba(32, 33, 35, 0.4);
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    color: #fff;
+}
+
+/* Add URL button */
+.url-input-container .add-url-btn {
+    background: #89eb3c;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.url-input-container .add-url-btn:hover {
+    background: #888;
+    color: #1a1a1a;
+}
+
+.admin-dashboard {
+    font-size: 0.9rem;
+}
+
+.admin-dashboard h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.admin-dashboard h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.admin-dashboard .table {
+    font-size: 0.85rem;
+}
+
+.admin-dashboard .card-body {
+    padding: 1rem;
+}
+
+.admin-dashboard .list-group-item {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+}
+
+.admin-dashboard .badge {
+    font-size: 0.75rem;
+}

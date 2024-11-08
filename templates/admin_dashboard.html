@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4 admin-dashboard">
+    <h2>S.W.A.R.M. Admin Dashboard</h2>
+    
+    <div class="card mb-4">
+        <div class="card-body">
+            <h4>System Overview</h4>
+            <p>Total Users: {{ users|length }}</p>
+            <p>Total Monitored URLs: {{ total_urls }}</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h4>User Details</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Location</th>
+                        <th>URLs Count</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                    <tr>
+                        <td>{{ user.first_name }} {{ user.last_name }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.phone }}</td>
+                        <td>{{ user.city }}, {{ user.state }}</td>
+                        <td>{{ user.urls|length }}</td>
+                        <td>
+                            <button class="btn btn-info btn-sm" type="button" 
+                                    data-bs-toggle="collapse" 
+                                    data-bs-target="#urls{{ user.id }}" 
+                                    aria-expanded="false">
+                                Show URLs
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="p-0">
+                            <div class="collapse" id="urls{{ user.id }}">
+                                <div class="card card-body m-2 bg-dark text-light border-secondary">
+                                    {% if user.urls %}
+                                        <ul class="list-group list-group-flush">
+                                        {% for url in user.urls %}
+                                            <li class="list-group-item bg-dark text-light border-secondary d-flex justify-content-between align-items-center">
+                                                {{ url.url }}
+                                                <span>
+                                                    <span class="badge bg-{{ 'success' if url.site_status == 'Online' else 'danger' }} mx-1">
+                                                        {{ url.site_status }}
+                                                    </span>
+                                                    <span class="badge bg-{{ 'success' if url.ssl_status == 'Valid' else 'danger' }} mx-1">
+                                                        SSL: {{ url.ssl_status }}
+                                                    </span>
+                                                </span>
+                                            </li>
+                                        {% endfor %}
+                                        </ul>
+                                    {% else %}
+                                        <p class="mb-0">No URLs monitored</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %} 
