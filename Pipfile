@@ -11,6 +11,7 @@ flask-sqlalchemy = "*"
 flask-wtf = "*"
 apscheduler = "*"
 flask-mail = "*"
+email-validator = "*"
 
 [dev-packages]
 
